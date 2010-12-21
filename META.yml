@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Test-XMLElement
-version:            0.02
+version:            0.03
 abstract:           Perl extension for testing element properties using XML Twig
 author:
     - Murugesan Kandasamy <murugu@cpan.org>

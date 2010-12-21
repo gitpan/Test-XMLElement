@@ -1,6 +1,10 @@
 Revision history for Perl extension Test::XMLElement.
 
+0.03  Changed perl version detail requirement.
+
+0.02  Added two tests and Changed prereq dependency module list.
+
 0.01  Sat Dec 18 20:35:58 2010
-	- original version; created by h2xs 1.23 with options
-		-XA -n Test::XMLElement
+	- original version;
+
 
