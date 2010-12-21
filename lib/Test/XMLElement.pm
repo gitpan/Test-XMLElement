@@ -3,7 +3,7 @@ use 5.010001;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Test::Builder;
 use XML::Twig;
@@ -36,7 +36,6 @@ sub import {
    *{$caller.'::is_xpath'}           = \&is_xpath;   
    *{$caller.'::is_xpath_count'}     = \&is_xpath_count;   
    
-
    $Tst->exported_to($caller);
    $Tst->plan(@_);
 }
@@ -296,7 +295,7 @@ Test::XMLElement - Perl extension for testing element properties using XML Twig
 
 =head1 SYNOPSIS
 
- use Test::XMLElement tests => 8;
+ use Test::XMLElement tests => 22;
 
  my $elt = "<bar/>";
 
@@ -423,6 +422,6 @@ Murugesan Kandasamy, E<lt>murugu@cpan dot orgE<gt>
 Copyright (C) 2009 by Murugesan Kandasamy
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.7 or,
+it under the same terms as Perl itself, either Perl version 5.6.1 or,
 at your option, any later version of Perl 5 you may have available.
 =cut

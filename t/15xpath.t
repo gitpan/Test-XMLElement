@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::Builder::Tester tests => 10;
+use Test::Builder::Tester tests => 15;
 use Test::XMLElement;
 
 my $xml = "<book><title>Kanye West</title>
@@ -10,13 +10,17 @@ my $xml = "<book><title>Kanye West</title>
 		</section1>
                 <section1><head>Biography</head>
 		<p>None</p></section1>
+		<BBB id='b1'/>
+		<BBB id='b2'/>
+		<BBB name=' bbb '/>
+		<BBB/>
 	   </book>";
 
 
 my $i=1;
 ## Test 1..6
 my $desc = "ok 1 - XPath Entry";
-my @xpath =('//p','/book/section1','//p[@class]','//section1//b','//p[@font="arial"]','//p[@class and @font]');
+my @xpath =('//p','/book/section1','//p[@class]','//section1//b','//p[@font="arial"]','//p[@class and @font]','//BBB[@id]','//BBB[@name]','//BBB[not(@*)]','//BBB[normalize-space(@name) = "bbb"]','/descendant::*');
 
 foreach my $xpath (@xpath) {
   test_out($desc);
